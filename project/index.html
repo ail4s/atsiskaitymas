@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mine and Shop Tabs</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src=""></script>
+</head>
+
+<body onload="document.getElementById('mainTabId').click()">
+    <div class="container">
+        <div class="tab">
+            <button id="mainTabId" class="tablinks" onclick="openTab(event, 'MineTab')">Mine</button>
+            <button id="shopTabId" class="tablinks" onclick="openTab(event, 'ShopTab')">Shop</button>
+        </div>
+        <div id="MineTab" class="tabcontent">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <div class="inventory">
+                        <h2>Inventory</h2>
+                        <div class="inventorys-columns-wrap">
+                            <div class="inventory-columns-box" id="inventory-container">
+                                <!-- <div class="inventory-box">
+                                <p>
+                                    Gold:0.2g
+                                </p>
+                            </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-items">
+                    <div class="grid-containers">
+                        <div class="grid-items">
+                            <div class="money">
+                                <p style="display: none;">Player ID: <span id="player-id">1</span></p>
+                                <p>Money: <span class="totals-money" id="total-money">$1000.00</span></p>
+                            </div>
+                            <div id="progress-container">
+                                <!-- Progress bars will be dynamically added here -->
+                            </div>
+                            <button class="mine-gold-btn displayCard" onclick="mineGold()">Mine Gold</button>
+                            <!-- Mining Progress Bar -->
+                            <div class="mining-progress">
+                                <div id="mining-progress-bar"><span class="total-energy" id="energy">100</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ShopTab" class="tabcontent">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <div class="money-of-energy">
+                        <p>Money: <span class="totals-money" id="shop-total-money">$1000.00</span></p>
+                        <div style="display: none;"><span class="totals-energys" id="energys">100</span></div>
+                    </div>
+                    <div class="columns">
+                        <h1>Shop</h1>
+                        <div class="columns-box">
+                            <div class="columns-wrap">
+                                <button class="box" onclick="buyEnergy(0)">Buy 10 Energy price:50</button>
+                                <button class="box" onclick="buyEnergy(1)">Buy 25 Energy price:150</button>
+                                <button class="box" onclick="buyEnergy(2)">Buy 50 Energy price:300</button>
+                                <button class="box" onclick="buyEnergy(3)">Buy 100 Energy price:600</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="inventory">
+                        <h2>Inventory</h2>
+                        <div class="inventory-columns-wrap">
+                            <div class="inventory-columns-box" id="inventorys-container">
+                                <!-- <div class="inventory-box " > 
+                            </div> -->
+                            </div>
+                        </div>
+                        <!-- Display the total gold value -->
+                         <div id="total-gold-value">0.00g</div>
+                        <button class="sell-gold-button removeCard" onclick="sellGold()">Sell Gold</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script src="script.js"></script>
+<script>    
+// Function to switch between tabs
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    // Hide all tab content
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    // Remove the "active" class from all tab buttons
+    tablinks = document.getElementsByClassName("tablinks");
+     for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+     }
+    // Show the clicked tab content and mark the button as active
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>

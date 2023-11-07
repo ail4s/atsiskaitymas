@@ -1,0 +1,214 @@
+ /* fonts */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+ body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+ }
+ button{
+    font-family: 'Poppins', sans-serif;
+ }
+ /* Define the tab style */
+ .tab {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 12px 0;
+    border-bottom: 1px solid rgb(197 197 211);
+    margin-bottom: 12px;
+}
+
+/* Style the tab buttons */
+.tab button {
+    background-color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;
+    border-radius: 17px;
+}
+
+/* Change background color of active tab button */
+.tab button.active {
+    background-color: #4CAF50;
+}
+
+/* Style the tab content */
+.container{
+    margin:0 auto;
+    padding: 0 15px;
+    max-width: 1000px;
+}
+.tabcontent {
+    display: none;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px; 
+}
+
+.grid-item {
+    background-color:#ededed;
+    padding: 10px;
+    text-align: center;
+    height: 846px;
+    border-radius: 12px;
+}
+.columns-wrap{
+    flex-direction: column;
+    display: flex;
+    height: 65vh;
+    overflow-y: auto;
+}
+/* .columns {
+    margin: 0 24px;
+    overflow-y: auto;
+    
+} */
+.columns-box{
+    display: inline-grid;
+}
+.box {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+p{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 22px;
+}
+.money-of-energy{
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin: 6px 0 10px 0;
+}
+.inventory-columns-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 157px;
+}
+.inventory-box{
+    border-radius: 12px;
+}
+.inventory{
+    border-radius: 12px;
+    padding: 14px;
+    min-height: 84vh;
+    position: relative;
+}
+.inventory h2{
+    margin-top: 10px;
+    font-size: 28px;
+}
+.sell-gold-button{
+    position: absolute;
+    bottom: 4px;
+    left:0;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    width:calc(100% - 24px);
+    height: 150px;
+    margin: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.inventory-box{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: white;
+    border-radius: 5px;
+}
+.inventory-columns-wrap{
+    height: 56vh;
+    overflow-y: auto;
+}
+.inventorys-columns-wrap{
+    height: 75vh;
+    overflow-y: auto;
+}
+.grid-items{
+    background-color: #ededed;
+    border-radius: 12px;
+    position: relative;
+    height:78vh;
+}
+.money{
+    text-align: center;
+    margin-top: 115px;
+}
+h2{
+    font-size: 33px;
+    font-weight: 600;
+}
+/* Define the progress bar styles */
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #4CAF50;
+    margin-bottom: 5px;
+    transition: width 1s;
+}
+
+/* Define the mining progress bar styles */
+.mining-progress {
+    width: 80%;
+    height: 50px;
+    background-color: #ddd;
+    margin: 0 0 0 58px;
+    position: relative;
+    margin-top: 237px;
+    border-radius: 12px;
+}
+
+#mining-progress-bar {
+    height: 100%;
+    background-color: green;
+    width: 100%;
+    transition: width 1s;
+    margin-top: 237px;
+    border-radius: 12px;
+}
+.mine-gold-btn{
+    position: absolute;
+    bottom: 4px;
+    left:0;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    width:calc(100% - 24px);
+    height: 150px;
+    margin: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+span{
+    font-size: 22px;
+    font-weight: 600;
+}
+.totals-energy{
+    text-align: center;
+    display: block;
+}
+.total-money{
+    margin: 0 0 0 20px;
+}
+.total-energy{
+    display: flex;
+    justify-content: center;
+}
+
+#total-gold-value{
+    position: absolute;
+    right: 38px;
+    bottom: 177px;
+}
